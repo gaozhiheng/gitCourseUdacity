@@ -1,0 +1,14 @@
+git diff : compare files in working directory to those in staging area
+git diff --staged : compare files in staging area to the latest commit
+git reset --hard : disgard all changes in wroking directory and staging area
+git branch : show current branch name
+git branch <branchName> : create a new branch
+git checkout <branchName> : check out to branch "branchName"
+git log --graph : graphly show the commit logs
+git log --graph --oneline : show only one line for one commit
+reachability : check out to an non-latest commit of a branch, and then make a new commit results in an un reachable commit.
+git checkout -b <branchName> : equivalent to 1)git branch <branchName> 2) git checkout <branchName>
+git merge Ba Bb : combine the latest commit of branch Ba and Bb, and then commit in the current branch(for example Ba)
+git show <commitID> : show the diff between <commitID> and it's parent, identical to "git diff <commitID1> <commitID2>, where the commitID2 is the parent of commitID1.
+git branch -d <branchName> : delete branch branchName.
+
