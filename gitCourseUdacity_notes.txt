@@ -12,3 +12,7 @@ git merge Ba Bb : combine the latest commit of branch Ba and Bb, and then commit
 git show <commitID> : show the diff between <commitID> and it's parent, identical to "git diff <commitID1> <commitID2>, where the commitID2 is the parent of commitID1.
 git branch -d <branchName> : delete branch branchName.
 
+maintain a git remote
+1.add an empty repository on github webpage.
+2.git remote : show remote repositories
+  
