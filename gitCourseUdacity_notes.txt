@@ -15,4 +15,53 @@ git branch -d <branchName> : delete branch branchName.
 maintain a git remote
 1.add an empty repository on github webpage.
 2.git remote : show remote repositories
-  
+  git remote add origin https://github.com/gaozhiheng/gitCourseUdacity.git
+  git remote -v
+
+git push origin master : push the local commit of branch master to the remote
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.01 KiB | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/gaozhiheng/gitCourseUdacity.git
+ * [new branch]      master -> master
+
+git pull grigin master : get the remote commit of branch master to the local branch
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/gaozhiheng/gitCourseUdacity
+ * branch            master     -> FETCH_HEAD
+    61f089b..33ced5b  master     -> origin/master
+	Updating 61f089b..33ced5b
+	Fast-forward
+	 file_added_on_web.txt | 1 +
+	  1 file changed, 1 insertion(+)
+	   create mode 100644 file_added_on_web.txt
+
+fork : clone repository on Github (from others to yourself)
+
+after clone a repository from Github, there is a hidden remote branch named origin/master
+git fetch: sync all remote branch  to the Github 
+
+git pull origin master  is identical to :
+   1)git fectch origin
+   2)git merge master origin/master
+
+if conflict wile merging, then :
+	1)resolev the conflict  
+	   "<<<<<<< HEAD" marks the contents of current branch;
+	   "||||||| merged common ancestors" marks the contents of common ancestors
+	   ">>>>>>> origin/master" marks the contents of origin/master branch
+	2)git add <conflict filename>
+	3)git commit
+
+$ git pull origin master
+From https://github.com/gaozhiheng/recipes
+ * branch            master     -> FETCH_HEAD
+ Already up-to-date.
+
+ git push origin master
